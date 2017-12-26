@@ -1,0 +1,26 @@
+version: '2'
+services:
+    eatlanta-server:
+        build: .
+        container_name: "eatlanta_server"
+        ports:
+            - 8080:8080
+        links:
+            - mongodb
+        volumes:
+            - ./app:/usr/src/app
+        depends_on:
+            - mongodb
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+        # To save data on your machine, use a volume and
+        # point it at the mongo data directory
+        # volumes:
+        #   - /Your/machine/path/data:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --smallfiles --logpath=/dev/null # --quiet
