@@ -1,0 +1,73 @@
+[{
+	"id" : 2,
+	"meta" : {
+		"id" : 2,
+		"title" : "East Meets South",
+		"author" : "Richard Bottomsville",
+		"description" : "Dining cars make a comeback, kind of.",
+		"location" : "Five Points Marta Station",
+		"address" : "30 Alabama St SW",
+		"mapPreviewUrl" : "https://eatlanta.s3.amazonaws.com/fivepoints.jpg",
+		"neighborhood" : "Downtown"
+	},
+	"content" : "This is the edited (again) second review."
+},
+{
+	"id" : 1,
+	"content" : "Graves double as curing ovens at Salt of the Earth, an outdoor eatery on the south side of Oakland Cemetery that specializes in preserving the living for the dead.  The groundskeeper, Karl Straumegård, moonlights as the chef-proprietor. He meticulously tends the gardens by day, filching branches of rosemary as he navigates Oakland’s cobbled, labyrinthine paths. At sunset, he commences preparations for his guests. A stock pot of stolen herbs simmers in the toolshed. An inconspicuous tomb is conspicuously pried open. The intruder emerges with decadent gems: fleshy thighs spiked with pink salt and maple sugar, pickled eyeballs wet with cider vinegar. It’s a one-man operation, and when patrons trickle in, mild confusion bleeds into their anticipation while the absent host hurriedly finishes setting the lonely picnic table tucked away behind the confederate memorial.\n\nDon’t expect nitrate-free bacon. Neat, fatty slices of crisply fried belly arrive sporting the bright rouge of sodium phosphate. Even the chemical averse, however, are quickly won over. Straumegård’s unnatural potions seem to reanimate the anatomical parts that populate each dish. Are the fingerlings, tossed in garlicky soy and thyme, curling and extending like a possessed composer, or is it my imagination? In any case, the perfectly tender tricep, perfuming diners in plum and juniper, is intoxicating enough to blur one’s vision. For idealists who insist on organic fare, the calves smoked over hickory apple chips—no nitrates added, a recent guest was assured—are satisfying enough to sustain a small commune.\n\nThere are some misses. But with courses as numerous and rapid as Kalashnikov rounds, an overly tough cut of shoulder or a curious pickled toe cum martini olive is as ineffectual as a stray bullet in a firing squad.\n\nCompliments to the chef may be deflected. When I offered mine, credit was deferred to Straumegård’s grandmother. The curing techniques showcased here were brought with her when she immigrated from Norway. Undoubtedly, she inherited them from previous generations herself. Straumegård is thankful that a precious culinary tradition has made its way to him after traversing millennia of Norsemen. We should be thankful that he has carried the practice over to the Other Side.",
+	"meta" : {
+		"id" : 1,
+		"title" : "Salt of the Earth",
+		"author" : "Sally Hedgewick",
+		"description" : "A modest groundskeeper has the cure.",
+		"location" : "Oakland Cemetery",
+		"address" : "248 Oakland Ave SE",
+		"mapPreviewUrl" : "https://eatlanta.s3.amazonaws.com/oakland.jpg",
+		"neighborhood" : "Old Fourth Ward"
+	},
+	"coordinates" : [
+		[
+			-84.376722,
+			33.746858
+		],
+		[
+			-84.376722,
+			33.746653
+		],
+		[
+			-84.372269,
+			33.750544
+		],
+		[
+			-84.371719,
+			33.750544
+		],
+		[
+			-84.368183,
+			33.747942
+		],
+		[
+			-84.368183,
+			33.746858
+		]
+	]
+},
+{
+	"id" : 67,
+	"content" : "This is the content of the article",
+	"coordinates" : {
+		"north" : 123,
+		"south" : 456,
+		"east" : 789,
+		"west" : 1011
+	},
+	"meta" : {
+		"id" : 67,
+		"title" : "Kindling",
+		"author" : "Deb Seedle",
+		"description" : "This is an aritcle description",
+		"location" : "Edgewood Shopping Center",
+		"neighborhood" : "Candler Park",
+		"mapPreviewUrl" : "some/url"
+	}
+}]
