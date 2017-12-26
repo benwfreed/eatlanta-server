@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "docker-compose up -d && ./node_modules/mocha/bin/mocha --timeout 120000 \"./app/**/*.spec.js\"",
+    "test": "./node_modules/mocha/bin/mocha --timeout 120000 \"./app/**/*.spec.js\"",
     "start": "nodemon app/server.js",
     "seed": "nodemon app/seed.js"
   },
