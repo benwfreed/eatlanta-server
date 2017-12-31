@@ -7,6 +7,10 @@ sudo: required
 services:
   - docker
 
+cache:
+  directories:
+    - node_modules
+
 before_install:
   - docker-compose up -d
 
