@@ -18,6 +18,7 @@ deploy:
   skip_cleanup: true
   on: &2
     repo: benwfreed/eatlanta-server
+    branch: develop
   bucket: eatlanta-server
   region: us-east-1
 - provider: codedeploy
@@ -30,6 +31,7 @@ deploy:
   deployment_group: eatlanta-server
   region: us-east-1
   on: *2
+    branch: develop
 script:
   - zip -r latest *
   - mkdir -p dpl_cd_upload
