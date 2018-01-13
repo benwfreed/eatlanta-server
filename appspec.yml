@@ -3,3 +3,7 @@ os: linux
 files:
   - source: ./
     destination: /home/ec2-user/eatlanta-server
+hooks:
+  AfterInstall:
+    - location: ./start-docker.sh
+      timeout: 180
