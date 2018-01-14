@@ -7,3 +7,6 @@ hooks:
   AfterInstall:
     - location: ./start-docker.sh
       timeout: 180
+  ApplicationStart:
+    - location: ./start-docker.sh
+      timeout: 180
