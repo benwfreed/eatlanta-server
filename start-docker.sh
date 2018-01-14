@@ -1,6 +1,5 @@
 #!/bin/bash
 pwd
-docker
-docker-compose
+cd /home/ec2-user/eatlanta-server
 docker-compose down
 docker-compose up -d
