@@ -14,11 +14,11 @@ module.exports = function(reviewModel, reviews, callback) {
   		reviewModel.insertMany(reviews)
   			.then( docs => {
   				console.log('%d reviews seeded into the db', docs.length);
-  				callback();
+  				callback(reviews);
   			})
   			.catch( err => {
   				console.log('there was an error inserting articles into the db', err);
-  				callback();
+  				callback(err);
   			});
   	});
 }

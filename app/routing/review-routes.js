@@ -15,9 +15,11 @@ module.exports = function(api) {
 
   api.get('/review', getReview);
 
+  api.put('/review', editReview);
+
 }
 
-const getReviews = function(req, res, next) {
+const getReviews = function(req, res) {
   var data;
   Review.findReviews(null, function(err, reviews) {
     data = reviews;
@@ -28,7 +30,7 @@ const getReviews = function(req, res, next) {
   });
 }
 
-const getReview = function(req, res, next) {
+const getReview = function(req, res) {
   var data;
   Review.findReviews(req.query.id, function(err, review) {
     if (err) {
@@ -45,6 +47,15 @@ const getReview = function(req, res, next) {
   });
 }
 
+const editReview = function(req, res) {
+  var editedReview = req.body;
+  console.log(req.body);
+  Review.editReview(editedReview, function(err, mongoRes) {
+    res.json(mongoRes);
+  });
+}
+
 // export functions for testing
 module.exports.getReviews = getReviews;
 module.exports.getReview = getReview;
+module.exports.editReview = editReview;

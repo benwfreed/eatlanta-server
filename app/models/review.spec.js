@@ -14,7 +14,7 @@ mongoose.connect(uri, {
 });
 
 before(function(done) {
-  seeder(reviewModel, reviews, function() {
+  seeder(reviewModel, reviews, function(res) {
     done();
   });
 });
@@ -44,16 +44,17 @@ describe('Review Model', function() {
   });
 
   it('should edit a review', function(done) {
-    const editedReview = {
-      id: 33,
-      title: 'New Title for New Review'
-    };
-    reviewModel.editReview(editedReview, function(err, mongoRes) {
-      expect(mongoRes).deep.equal({ n: 1, nModified: 1, ok: 1 });
-      reviewModel.findOne({id: 33}, function(err, review) {
-        expect(review.meta.title).equal(editedReview.title);
+    reviewModel.findReviews(33, function(err, review) {
+      if (err) { return; }
+      const editedReview = {
+          _id: review[0]._id,
+          title: 'New Title for New Review'
+      };
+      reviewModel.editReview(editedReview, function(err, mongoRes) {
+        expect(mongoRes.meta.title).equal('New Title for New Review');
+        done();
       });
-      done();
+
     });
   });
 

@@ -9,7 +9,8 @@ var reviewSchema = mongoose.Schema({
 		description: String,
 		location: String,
 		neighborhood: String,
-		mapPreviewUrl: String
+		mapPreviewUrl: String,
+		address: String
 	},
 	content: String,
 	coordinates: {
@@ -37,18 +38,19 @@ module.exports.addReview = function(comment, callback) {
 };
 
 module.exports.editReview = function(editedReview, callback) {
-	const query = {id: editedReview.id};
-	const options = {upsert: false, multi: false};
-	Review.update(query,
+	const query = {_id: editedReview._id};
+	const options = {upsert: false, multi: false, new: true};
+	Review.findOneAndUpdate(query,
 				  {$set:
 						 {
-							 'content': editedReview.content,
-					  	 'meta.title': editedReview.title,
-				  		 'meta.author' : editedReview.author,
-						   'meta.description' : editedReview.description,
-						   'meta.location' : editedReview.location,
-						   'meta.neighborhood' : editedReview.neighborhood,
-						   'meta.mapPreviewUrl': editedReview.mapPreviewUrl
+                            'content': editedReview.content,
+                            'meta.title': editedReview.title,
+                            'meta.author' : editedReview.author,
+                            'meta.description' : editedReview.description,
+                            'meta.location' : editedReview.location,
+                            'meta.neighborhood' : editedReview.neighborhood,
+                            'meta.mapPreviewUrl': editedReview.mapPreviewUrl,
+                            'meta.address': editedReview.address
 						 }
 					},
 				  options,

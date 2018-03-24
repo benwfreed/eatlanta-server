@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --timeout 120000 --exit \"./app/**/*.spec.js\"",
     "start": "nodemon app/server.js",
-    "seed": "nodemon app/seed.js"
+    "seed": "nodemon app/seed/seed.js"
   },
   "author": "",
   "license": "ISC",
