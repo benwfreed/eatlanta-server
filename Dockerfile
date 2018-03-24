@@ -5,6 +5,9 @@ FROM node:boron
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/
 
+# specify volume
+VOLUME ./app /usr/src/app
+
 # install dependencies
 COPY package.json /usr/src/
 RUN npm install
